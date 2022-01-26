@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+.soft-blue {
+  color: #8bacda;
+  font-weight: 300;
+}
+
+.cyan {
+  color: #00fff7;
+  font-weight: 500;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: 1px solid #2f415b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0d192b;
+}
+
+.card {
+  color: white;
+  background: #14253d;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.card .container__img img {
+  width: 16.5rem;
+  border-radius: 1rem;
+}
+
+.card .container__desc .title {
+  margin: 1rem 0;
+}
+
+.card .container__desc .sub {
+  display: flex;
+}
+
+.card .container__desc .sub__total {
+  display: flex;
+  flex: 1;
+}
+
+.card .container__desc .sub__total img {
+  position: relative;
+  top: 0.08rem;
+}
+
+.card .container__desc .sub__view {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.card .container__desc .sub__view img {
+  position: relative;
+  top: 0.15rem;
+}
+
+.card .container__desc .sub .img-container {
+  margin-right: 0.35rem;
+}
+
+.card .container__creator {
+  display: flex;
+  align-items: center;
+}
+
+.card .container__creator img {
+  width: 1.8rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card .container__creator p {
+  margin-left: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */

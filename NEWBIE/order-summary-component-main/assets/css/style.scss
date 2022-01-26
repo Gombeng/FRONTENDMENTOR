@@ -1,0 +1,155 @@
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.mb-1 {
+	margin-bottom: 1rem;
+}
+
+.title {
+	font-weight: 800;
+	color: $Dark-blue;
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $Pale-blue;
+	background-image: url('../../images/pattern-background-desktop.svg');
+	background-repeat: no-repeat;
+
+	@media screen and (max-width: 376px) {
+		background-image: url('../../images/pattern-background-mobile.svg');
+	}
+}
+
+.card {
+	margin: 0 1.5rem;
+	max-width: 25rem;
+	// border: 1px solid black;
+	text-align: center;
+	border-radius: 1rem;
+	overflow: hidden;
+	background: white;
+	box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.1);
+
+	.container-img {
+		img {
+			width: 100%;
+		}
+	}
+
+	.container {
+		padding: 2rem;
+
+		&__desc {
+			.paragraph {
+				color: $Desaturated-blue;
+				line-height: 1.65rem;
+			}
+		}
+
+		&__plan {
+			display: flex;
+			margin: 1rem 0.5rem;
+			padding: 1rem;
+			justify-content: flex-start;
+			align-items: center;
+			background: $Very-pale-blue;
+			border-radius: 1rem;
+
+			.wrapper {
+				align-items: center;
+				margin-right: 1rem;
+
+				img {
+					width: 2.6rem;
+				}
+			}
+
+			.plan {
+				text-align: left;
+				.price {
+					color: $Desaturated-blue;
+				}
+			}
+
+			.change {
+				margin-left: auto;
+				color: $Bright-blue;
+				transition: 0.3s ease;
+				font-weight: bold;
+
+				&:hover {
+					opacity: 0.8;
+					text-decoration: none;
+				}
+			}
+		}
+
+		&__btn {
+			display: flex;
+			flex-direction: column;
+			cursor: pointer;
+
+			.primary {
+				transition: 0.3s ease;
+				cursor: pointer;
+				margin: 0.5rem 0 1.8rem;
+				padding: 0.8rem 4rem;
+				font-weight: 600;
+				letter-spacing: 0.2px;
+				color: white;
+				background: $Bright-blue;
+				border-radius: 0.5rem;
+				outline: none;
+				border: none;
+				font-family: inherit;
+				font-size: 1rem;
+				box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.3);
+
+				&:hover {
+					opacity: 0.85;
+				}
+			}
+			.secondary {
+				transition: 0.3s ease;
+				color: $Desaturated-blue;
+				text-decoration: none;
+				font-weight: 700;
+				// padding: 0.8rem 4rem;
+				// border-radius: 0.5rem;
+				// background: #000;
+
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

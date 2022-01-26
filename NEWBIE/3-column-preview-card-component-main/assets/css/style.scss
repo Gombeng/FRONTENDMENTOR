@@ -1,0 +1,127 @@
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+// (paragraphs)
+$Transparent-white: hsla(0, 0%, 100%, 0.6);
+// (background, headings, buttons)
+$Very-light-gray: hsl(0, 0%, 95%);
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Lexend Deca', sans-serif;
+}
+
+body,
+.btn {
+	background: $Very-light-gray;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0 1.5rem;
+	// text-align: center;
+
+	.card {
+		padding: 3em;
+		width: 20em;
+		min-height: fit-content;
+
+		.title {
+			font-family: 'Big Shoulders Display', cursive;
+			color: $Very-light-gray;
+			text-transform: uppercase;
+			margin: 1.5rem 0;
+			font-size: 2.5em;
+		}
+
+		.paragraph {
+			color: $Transparent-white;
+			line-height: 1.6em;
+			font-weight: normal;
+			margin-bottom: 5em;
+		}
+
+		.btn {
+			border: none;
+			outline: none;
+			padding: 0.6rem 1.6rem;
+			text-transform: capitalize;
+			font-family: inherit;
+			border-radius: 2rem;
+			cursor: pointer;
+			transition: 0.3s ease;
+			border: 2px solid transparent;
+			font-size: 1em;
+
+			&:hover {
+				border: 2px solid $Very-light-gray;
+				background: transparent;
+				color: $Very-light-gray;
+			}
+		}
+
+		&__sedans {
+			background-color: $Bright-orange;
+			border-radius: 0.5rem 0 0 0.5rem;
+
+			.btn {
+				color: $Bright-orange;
+			}
+		}
+		&__suvs {
+			background-color: $Dark-cyan;
+			border-radius: 0;
+
+			.btn {
+				color: $Dark-cyan;
+			}
+		}
+		&__luxury {
+			background-color: $Very-dark-cyan;
+			border-radius: 0 0.5rem 0.5rem 0;
+
+			.btn {
+				color: $Very-dark-cyan;
+			}
+		}
+	}
+
+	@media screen and(max-width: 650px) {
+		flex-direction: column;
+		margin: 5em 1.5rem;
+
+		.card {
+			width: 18.55em;
+			.paragraph {
+				margin-bottom: 2em;
+			}
+
+			&:first-child {
+				border-radius: 0.5rem 0.5rem 0 0;
+			}
+
+			&:last-child {
+				border-radius: 0 0 0.5rem 0.5rem;
+			}
+		}
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+body,
+.btn {
+  background: #f2f2f2;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 1.5rem;
+}
+
+.container .card {
+  padding: 3em;
+  width: 20em;
+  min-height: fit-content;
+}
+
+.container .card .title {
+  font-family: 'Big Shoulders Display', cursive;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+  font-size: 2.5em;
+}
+
+.container .card .paragraph {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6em;
+  font-weight: normal;
+  margin-bottom: 5em;
+}
+
+.container .card .btn {
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.6rem;
+  text-transform: capitalize;
+  font-family: inherit;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 1em;
+}
+
+.container .card .btn:hover {
+  border: 2px solid #f2f2f2;
+  background: transparent;
+  color: #f2f2f2;
+}
+
+.container .card__sedans {
+  background-color: #e38826;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.container .card__sedans .btn {
+  color: #e38826;
+}
+
+.container .card__suvs {
+  background-color: #006970;
+  border-radius: 0;
+}
+
+.container .card__suvs .btn {
+  color: #006970;
+}
+
+.container .card__luxury {
+  background-color: #004241;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.container .card__luxury .btn {
+  color: #004241;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    margin: 5em 1.5rem;
+  }
+  .container .card {
+    width: 18.55em;
+  }
+  .container .card .paragraph {
+    margin-bottom: 2em;
+  }
+  .container .card:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .container .card:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
