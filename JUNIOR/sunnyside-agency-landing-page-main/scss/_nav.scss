@@ -1,0 +1,86 @@
+.nav {
+	@include flexBox;
+	justify-content: space-between;
+
+	.btn-menu,
+	.logo {
+		cursor: pointer;
+		z-index: 999;
+	}
+	.btn-menu {
+		display: none;
+	}
+
+	@include screenBreakpoint(phonetotablet) {
+		.btn-menu {
+			display: block;
+		}
+
+		.links {
+			@include flexBoxCol;
+			position: absolute;
+			min-height: 40vh;
+			width: 90%;
+			top: -100%;
+			background: $White;
+			z-index: 9;
+			transition: $halfSec;
+
+			&::before {
+				content: '';
+				@include triangle;
+				top: -9%;
+				right: 0;
+				position: absolute;
+			}
+
+			li:last-child {
+				margin: 1em 0;
+			}
+
+			.link {
+				color: $Very-darkgrayish-blue;
+			}
+
+			.cta {
+				@include cta;
+			}
+		}
+	}
+
+	#check {
+		display: none;
+
+		&:checked ~ .links {
+			top: 16%;
+		}
+	}
+
+	@include screenBreakpoint(larger-desktop) {
+		.logo {
+			transform: scale(1.2);
+		}
+
+		.links {
+			@include flexBox;
+
+			.link {
+				color: $White;
+				margin-right: 2em;
+			}
+
+			.cta {
+				@include cta;
+				background: $White;
+				margin-right: 0;
+				transition: $halfSec;
+
+				&:hover {
+					color: $White;
+					background: rgba(255, 255, 255, 0.3);
+					// background: $Yellow;
+				}
+			}
+		}
+	}
+}

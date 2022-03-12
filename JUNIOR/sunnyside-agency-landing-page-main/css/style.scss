@@ -1,0 +1,83 @@
+@import '../scss/mixins';
+@import '../scss/variables';
+@import '../scss/header';
+@import '../scss/nav';
+@import '../scss/about';
+@import '../scss/services';
+@import '../scss/projects';
+@import '../scss/footer';
+
+* {
+	@include resetHtml;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 18px;
+	font-family: $font-secondary;
+	text-align: center;
+}
+
+h1,
+h2,
+h4,
+strong,
+.learn-more {
+	font-family: $font-primary;
+	font-weight: 900;
+}
+
+// section,
+.testimonials,
+footer {
+	@include paddingSide;
+}
+
+h1,
+.learn-more,
+.text-up {
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 2.5em;
+	letter-spacing: 5px;
+	color: $White;
+}
+h2 {
+	font-size: 1.8em;
+	color: $Very-darkdesaturated-blue;
+}
+h4 {
+	color: $Dark-grayish-blue;
+	letter-spacing: 3px;
+}
+p {
+	@include paragraph;
+}
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: $Very-darkdesaturated-blue;
+}
+
+// .container {
+// 	display: grid;
+// 	grid-template-columns: repeat(4, 1fr);
+
+// 	.bg-img {
+// 		background-image: url('../images/desktop/image-gallery-cone.jpg');
+// 		@include bgImage;
+// 		min-height: 66vh;
+// 		max-width: 25vw;
+
+// 		&:nth-child(2) {
+// 			background-image: url('../images/desktop/image-gallery-orange.jpg');
+// 		}
+// 	}
+// }

@@ -1,0 +1,24 @@
+@import './mixins';
+
+.header {
+	@include bgImage;
+	background-image: url('../images/mobile/image-header.jpg');
+	min-height: 100vh;
+
+	.container {
+		@include paddingSide;
+	}
+
+	.text {
+		@include flexBoxCol;
+		min-height: 80vh;
+	}
+
+	@include screenBreakpoint(larger-desktop) {
+		background-image: url('../images/desktop/image-header.jpg');
+
+		.text {
+			min-height: 65vh;
+		}
+	}
+}
