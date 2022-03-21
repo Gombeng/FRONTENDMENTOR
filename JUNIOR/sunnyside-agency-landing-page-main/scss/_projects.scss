@@ -1,0 +1,42 @@
+.projects {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include screenBreakpoint(desktop) {
+		@include flexBox;
+	}
+
+	.card {
+		@include bgImage;
+		min-height: 25vh;
+		background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
+
+		@include screenBreakpoint(desktop) {
+			background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
+			min-height: 80vh;
+			min-width: 25%;
+		}
+
+		&:nth-child(2) {
+			background-image: url('../images/mobile/image-gallery-orange.jpg');
+
+			@include screenBreakpoint(desktop) {
+				background-image: url('../images/desktop/image-gallery-orange.jpg');
+			}
+		}
+		&:nth-child(3) {
+			background-image: url('../images/mobile/image-gallery-cone.jpg');
+
+			@include screenBreakpoint(desktop) {
+				background-image: url('../images/desktop/image-gallery-cone.jpg');
+			}
+		}
+		&:nth-child(4) {
+			background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
+
+			@include screenBreakpoint(desktop) {
+				background-image: url('../images/desktop/image-gallery-sugarcubes.jpg');
+			}
+		}
+	}
+}

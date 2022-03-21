@@ -1,0 +1,82 @@
+.services {
+	.graphic,
+	.photography {
+		@include bgImage;
+		min-height: 100vh;
+		position: relative;
+
+		.text {
+			@include paddingSide;
+			bottom: 0;
+			position: absolute;
+
+			h2,
+			p {
+				color: $Dark-desaturated-cyan;
+			}
+
+			p {
+				font-size: 0.9em;
+			}
+		}
+
+		@include screenBreakpoint(desktop) {
+			background-image: url('../images/desktop/image-graphic-design.jpg');
+			min-height: 80vh;
+			min-width: 50%;
+		}
+	}
+
+	.photography {
+		background-image: url('../images/mobile/image-photography.jpg');
+
+		@include screenBreakpoint(desktop) {
+			background-image: url('../images/desktop/image-photography.jpg');
+		}
+
+		h2,
+		p {
+			color: $Dark-blue;
+		}
+	}
+
+	.container {
+		@include screenBreakpoint(desktop) {
+			@include flexBox;
+		}
+	}
+
+	.testimonials {
+		margin-top: 3em;
+
+		.card {
+			margin: 5em 0;
+
+			img {
+				width: 5em;
+				border-radius: 50%;
+			}
+
+			.info {
+				@include flexBoxCol;
+				color: $Very-darkdesaturated-blue;
+
+				span {
+					margin-top: 1em;
+					color: $Grayish-blue;
+					font-size: 0.9em;
+				}
+			}
+			@include screenBreakpoint(desktop) {
+				max-width: 29%;
+			}
+		}
+
+		.container {
+			@include screenBreakpoint(desktop) {
+				@include flexBox;
+				align-items: flex-start;
+			}
+		}
+	}
+}
