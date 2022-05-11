@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-areas: 'header hero' 'main hero' 'input hero';
+  }
+}
+
+.container__header {
+  grid-area: header;
+  padding: 2.5em;
+}
+
+.container__header img {
+  width: clamp(8em, 2vw, 10em);
+}
+
+.container__hero {
+  grid-area: hero;
+  min-height: 45vh;
+  background-image: url("../images/hero-mobile.jpg");
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .container__hero {
+    background-image: url("../images/hero-desktop.jpg");
+    width: 30vw;
+    min-width: 100%;
+    background-position: center;
+  }
+}
+
+.container__main {
+  grid-area: main;
+}
+
+@media screen and (max-width: 768px) {
+  .container__main {
+    margin: 4em 0 2em 0;
+    text-align: center;
+  }
+}
+
+.container__main--title {
+  color: #413a3a;
+  text-transform: uppercase;
+  font-size: clamp(2.8em, 3vw, 4em);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.container__main--title span {
+  color: #ce9797;
+  font-weight: 300;
+}
+
+.container__main--description {
+  color: #ce9797;
+  line-height: 1.8em;
+  max-width: 28em;
+}
+
+@media screen and (max-width: 768px) {
+  .container__main--description {
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+}
+
+.container__input {
+  grid-area: input;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+  .container__input {
+    justify-content: center;
+  }
+}
+
+.container__input--primary {
+  all: unset;
+  border: 1px solid #ce9797;
+  padding: 1em 1.5em;
+  border-radius: 2em;
+  width: 60%;
+  text-align: left;
+  position: relative;
+  right: -2em;
+}
+
+.container__input--primary::placeholder {
+  color: #ce9797;
+}
+
+@media screen and (min-width: 768px) {
+  .container__input--primary {
+    right: 0em;
+  }
+}
+
+.container__input--cta {
+  border-radius: 2em;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  padding: 1em 1.8em;
+  cursor: pointer;
+  position: relative;
+  left: -2em;
+  transition: 0.5s ease;
+}
+
+.container__input--cta:hover {
+  background: #f8bfbf;
+}
+
+@media screen and (min-width: 768px) {
+  .container__input--cta {
+    left: -4em;
+    padding: 1em 2.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container__header, .container__main, .container__input {
+    padding-left: 8em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

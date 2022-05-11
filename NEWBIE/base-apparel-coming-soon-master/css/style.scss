@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+$gradient1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+	min-height: 100vh;
+
+	@media screen and (min-width: 768px) {
+		display: grid;
+		grid-template-areas:
+			'header hero'
+			'main hero'
+			'input hero';
+	}
+
+	&__header {
+		grid-area: header;
+		padding: 2.5em;
+
+		img {
+			width: clamp(8em, 2vw, 10em);
+		}
+	}
+
+	&__hero {
+		grid-area: hero;
+		min-height: 45vh;
+		background-image: url('../images/hero-mobile.jpg');
+		background-size: cover;
+		overflow: hidden;
+		background-repeat: no-repeat;
+
+		@media screen and (min-width: 768px) {
+			background-image: url('../images/hero-desktop.jpg');
+			width: 30vw;
+			min-width: 100%;
+			background-position: center;
+		}
+	}
+
+	&__main {
+		grid-area: main;
+
+		@media screen and (max-width: 768px) {
+			margin: 4em 0 2em 0;
+			text-align: center;
+		}
+
+		&--title {
+			color: $Dark-Grayish-Red;
+			text-transform: uppercase;
+			font-size: clamp(2.8em, 3vw, 4em);
+			letter-spacing: 0.2em;
+			margin-bottom: 0.5em;
+
+			span {
+				color: $Desaturated-Red;
+				font-weight: 300;
+			}
+		}
+
+		&--description {
+			color: $Desaturated-Red;
+			line-height: 1.8em;
+			max-width: 28em;
+
+			@media screen and (max-width: 768px) {
+				margin: 0 auto;
+				padding: 0 1em;
+			}
+		}
+	}
+
+	&__input {
+		grid-area: input;
+		display: flex;
+		align-items: flex-start;
+
+		@media screen and (max-width: 768px) {
+			justify-content: center;
+		}
+
+		&--primary {
+			all: unset;
+			border: 1px solid $Desaturated-Red;
+			padding: 1em 1.5em;
+			border-radius: 2em;
+			width: 60%;
+			text-align: left;
+			position: relative;
+			right: -2em;
+
+			&::placeholder {
+				color: $Desaturated-Red;
+			}
+
+			@media screen and (min-width: 768px) {
+				right: 0em;
+			}
+		}
+
+		&--cta {
+			border-radius: 2em;
+			background-image: $gradient2;
+			padding: 1em 1.8em;
+			cursor: pointer;
+			position: relative;
+			left: -2em;
+			transition: 0.5s ease;
+
+			&:hover {
+				background: hsl(0, 80%, 86%);
+			}
+
+			@media screen and (min-width: 768px) {
+				left: -4em;
+				padding: 1em 2.5em;
+			}
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		&__header,
+		&__main,
+		&__input {
+			padding-left: 8em;
+		}
+	}
+}
